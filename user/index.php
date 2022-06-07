@@ -7,13 +7,14 @@ include './sharedFunc/db.php';
 <section id="hero" class="clearfix">
   <div class="container d-flex h-100">
     <div class="row justify-content-center align-self-center">
-      <div class="col-lg-6 intro-info order-lg-first order-last" data-aos="fade-up">
+    <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="fade-up">
+        <img src="./assets/img/p1.jpeg" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-6 intro-info order-lg-second order-last" data-aos="fade-up">
         <h2 class="text-warning">pets <br>for Your <span class="text-danger">animales!</span></h2>
 
       </div>
-      <div class="col-lg-6 intro-img order-lg-last order-first" data-aos="fade-up">
-        <img src="./assets/img/p1.jpeg" alt="" class="img-fluid">
-      </div>
+
     </div>
   </div>
 </section><!-- End Hero -->

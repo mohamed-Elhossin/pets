@@ -28,7 +28,7 @@ if ($_SESSION['role'] == 0) {
     </div><!-- End Page Title -->
     <section class="section dashboard">
       <div class="row">
-        <div class="container col-8 mt-5 text-center">
+        <div class="container mt-5 text-center">
           <div class="card">
             <div class="card-body">
               <table class="table table-dark">

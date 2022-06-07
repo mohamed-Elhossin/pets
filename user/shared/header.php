@@ -14,10 +14,12 @@ if (isset($_GET['logout'])) {
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
         <li><a class="nav-link scrollto active" href="/pets/user/#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="/pets/user/#about">About</a></li>
+        <li><a class="nav-link scrollto" href="/pets/user/#about">Who Are we</a></li>
         <li><a class="nav-link scrollto" href="/pets/user/#services">Services</a></li>
         <li><a class="nav-link scrollto" href="/pets/user/#team">Team</a></li>
+
         <?php if (isset($_SESSION['admin'])) : ?>
+          <li><a class="nav-link scrollto" href="/pets/user/messages/list.php">messages</a></li>
           <li><a class="nav-link scrollto" href="/pets/user/posts/add.php">Create Post</a></li>
           <li><a class="nav-link scrollto" href="/pets/user/posts/list.php">List posts</a></li>
         <?php endif; ?>
