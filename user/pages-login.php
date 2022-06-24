@@ -1,6 +1,7 @@
 <?php
 include './shared/head.php';
 include './sharedFunc/db.php';
+include './shared/header.php';
 include './sharedFunc/func.php';
 
 if (isset($_POST['login'])) {
@@ -20,12 +21,12 @@ if (isset($_POST['login'])) {
 
     header("LOCATION:/pets/user/");
   } else {
-    echo "<div class=' mt-5  alert alert-danger mx-auto w-50'>
-    <h3>   Wrong Password OR User Name </h3>
+    echo "<div class=' mt-5  alert alert-primary mx-auto w-50'>
+    <h3>  Please Try Agein </h3>
         </div>";
   }
 }
-print_r($_SESSION);
+
 ?>
 <main>
   <div class="container">
@@ -37,7 +38,6 @@ print_r($_SESSION);
 
             <div class="d-flex justify-content-center py-4">
               <a href="/NiceAdmin/index.php" class="logo d-flex align-items-center w-auto">
-                <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">pets</span>
               </a>
             </div><!-- End Logo -->
@@ -48,7 +48,7 @@ print_r($_SESSION);
 
                 <div class="pt-4 pb-2">
                   <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
-                  <p class="text-center small">Enter your username & password to login</p>
+                  <p class="text-center small">Enter your Email & password to login</p>
                 </div>
 
                 <form class="row g-3 needs-validation" novalidate method="POST">
@@ -83,10 +83,6 @@ print_r($_SESSION);
                 </form>
 
               </div>
-            </div>
-
-            <div class="credits">
-              Designed by <a href="">pets</a>
             </div>
 
           </div>

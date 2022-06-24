@@ -65,7 +65,7 @@ if (isset($_GET['edit'])) {
             <h1 class="display-1 text-center text-info">Edit Your profile </h1>
 
         <?php else : ?>
-            <h1 class="display-1 text-center text-info">Sign Up </h1>
+            <h1 class="display-1 text-center text-danger">Create New Account </h1>
         <?php endif; ?>
     </div><!-- End Page Title -->
 
@@ -77,28 +77,28 @@ if (isset($_GET['edit'])) {
                         <form method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label> Full Name</label>
-                                <input value="<?php echo $name ?>" name="name" type="text" class="form-control">
+                                <input value="<?php echo $name ?>" name="name" type="text" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label> user Email </label>
-                                <input value="<?php echo $email ?>" name="email" type="email" class="form-control">
+                                <input value="<?php echo $email ?>" name="email" type="email" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label> user phone </label>
-                                <input value="<?php echo $phone ?>" name="phone" type="text" class="form-control">
+                                <input value="<?php echo $phone ?>" name="phone" type="text" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label> user Address</label>
-                                <input value="<?php echo $address ?>" name="address" type="text" class="form-control">
+                                <input value="<?php echo $address ?>" name="address" type="text" required class="form-control">
                             </div>
                             <div class="form-group">
                                 <label> user password</label>
-                                <input value="<?php echo $password ?>" name="password" type="password" class="form-control">
+                                <input value="<?php echo $password ?>" name="password" type="password" required class="form-control">
                             </div>
                             <?php if (!$update) : ?>
                                 <div class="form-group">
                                     <label> image profile</label>
-                                    <input name="image" type="file" class="form-control">
+                                    <input name="image" type="file" required class="form-control">
                                 </div>
                             <?php endif; ?>
                             <?php if ($update) : ?>

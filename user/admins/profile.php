@@ -23,7 +23,7 @@ if (isset($_SESSION['admin'])) {
             <!-- Basic Plan  -->
             <div class="col-xs-12 col-lg-3 ">
                 <div class="card  bg-dark mt-5">
-                    <img height="300" src="/pets/user/posts/upload/<?php echo $row['image'] ?>" class="img-top" alt="Eror">
+                    <img height="300" src="/pets/user/admins/upload/<?php echo $row['image'] ?>" class="img-top" alt="Eror">
                     <div class="card-header">
                     </div>
                     <div class="card-block">

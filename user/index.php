@@ -109,7 +109,7 @@ include './sharedFunc/db.php';
           </div>
         </div>
 
-    
+
       </div>
     </div>
   </section><!-- End Why Us Section -->
@@ -124,74 +124,67 @@ include './sharedFunc/db.php';
         <h3>Team</h3>
         <p>Our Team</p>
       </div>
-
       <div class="row">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-2 col-md-6">
           <div class="member">
             <img src="assets/img/t1.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
-                <h4>Jousif</h4>
+                <h4>Jousef</h4>
                 <span>Customer Service</span>
- 
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="member">
             <img src="assets/img/t2.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Ahmed</h4>
                 <span>public relations</span>
-   
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-2 col-md-6">
           <div class="member">
             <img src="assets/img/t3.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Roshan</h4>
-                <span>Finincail acoounting</span>
-      
+                <span>Digtal marketing</span>
+
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-6" data-aos-delay="400">
+        <div class="col-lg-3 col-md-6" data-aos-delay="400">
           <div class="member">
             <img src="assets/img/t4.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
-                <h4>Mariam</h4>
+                <h4>Mariam Amir</h4>
                 <span>HR</span>
-     
+
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-2 col-md-6">
           <div class="member">
             <img src="assets/img/t5.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
-                <h4>Mariam</h4>
-                <span>Digital marketing</span>
-    
+                <h4>Mariam khaled</h4>
+                <span>Financial</span>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </section><!-- End Team Section -->
 
