@@ -12,12 +12,16 @@ if (isset($_GET['delete'])) {
   $delete = "DELETE FROM `posts` where id = $id";
   $d =  mysqli_query($conn, $delete);
   header('LOCATION: /pets/admin/posts/list.php');
+  path('posts/list.php');
+
 }
 if (isset($_GET['approve'])) {
   $id = $_GET['approve'];
   $update = "UPDATE `posts`  SET `status`='done' where id = $id";
   $u = mysqli_query($conn, $update);
   testMessage($u, "Post Approved");
+  path('posts/list.php');
+
 }
 ?>
 <main id="main" class="main">

@@ -20,7 +20,7 @@ include './sharedFunc/func.php';
 
       <div class="row gy-4">
 
-        <div class="col-xl-6">
+        <div class="col-xl-12">
 
           <div class="row">
             <div class="col-lg-6">
@@ -28,14 +28,14 @@ include './sharedFunc/func.php';
                 <i class="bi bi-geo-alt"></i>
                 <h3>Address</h3>
                 <p>Egypt
-maser elGdidida</p>
+Eldoky </p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="info-box card">
                 <i class="bi bi-telephone"></i>
                 <h3>Call Us</h3>
-                <p>024600968</p>
+                <p>029160268</p>
               </div>
             </div>
             <div class="col-lg-6">

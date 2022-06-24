@@ -8,10 +8,10 @@ include '../sharedFunc/func.php';
 $select = "SELECT * FROM `messages`";
 $s = mysqli_query($conn, $select);
 if (isset($_GET['delete'])) {
-  $id =   $_GET['delete'];
-  $delete = "DELETE FROM `messages` where id = $id";
-  $d =  mysqli_query($conn, $delete);
-  header('LOCATION: /pets/admin/messages/list.php');
+    $id = $_GET['delete'];
+    $delete = "DELETE FROM `messages` where id = $id";
+    $d = mysqli_query($conn, $delete);
+    path('messages/list.php');
 }
 ?>
 <main id="main" class="main">
@@ -38,7 +38,7 @@ if (isset($_GET['delete'])) {
                 <th>User ID</th>
                 <th colspan="3">Action</th>
               </tr>
-              <?php foreach ($s as $data) { ?>
+              <?php foreach ($s as $data) {?>
                 <tr>
                   <th> <?php echo $data['id'] ?> </th>
                   <th> <?php echo $data['subject'] ?> </th>
@@ -48,7 +48,7 @@ if (isset($_GET['delete'])) {
                   <th> <a class="btn btn-info" href="/pets/admin/messages/reply.php?show=<?php echo $data['id'] ?>">reply </a> </th>
                   <th> <a class="btn btn-danger" onclick="return confirm('are your Sure !')" href="/pets/admin/messages/list.php?delete=<?php echo $data['id'] ?>">delete </a> </th>
                 </tr>
-              <?php } ?>
+              <?php }?>
             </table>
           </div>
         </div>

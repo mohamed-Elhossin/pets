@@ -6,13 +6,13 @@ include '../sharedFunc/db.php';
 include '../sharedFunc/func.php';
 
 if (isset($_GET['show'])) {
-  $id = $_GET['show'];
-  if (isset($_POST['send'])) {
-    $reply = $_POST['reply'];
-    $update = "UPDATE `messages`  SET replay ='$reply' where id = $id";
-    $u = mysqli_query($conn, $update);
-    testMessage($u, "Send Answer");
-  }
+    $id = $_GET['show'];
+    if (isset($_POST['send'])) {
+        $reply = $_POST['reply'];
+        $update = "UPDATE `messages`  SET replay ='$reply' where id = $id";
+        $u = mysqli_query($conn, $update);
+        testMessage($u, "Send Answer");
+    }
 }
 
 ?>
@@ -31,10 +31,13 @@ if (isset($_GET['show'])) {
       <div class="container col-6 mt-5 ">
         <div class="card">
           <form action="" method="POST">
-
-  
+            <div class="form-group p-2">
+              <label for="">Send Your Answer </label>
             <input type="text" placeholder="Enter your Reply" class="mt-3 form-control" name="reply">
             <button name="send" class="btn btn-info my-3"> Send Your Answer </button>
+
+            </div>
+
           </form>
         </div>
       </div>

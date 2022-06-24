@@ -24,3 +24,8 @@ function auth()
     }
 }
 auth();
+function path($go){
+    echo "<script>
+    window.location.replace('http://localhost/pets/admin/$go')
+</script>";
+}

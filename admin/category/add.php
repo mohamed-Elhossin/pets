@@ -33,7 +33,6 @@ if (isset($_GET['edit'])) {
         $update = "UPDATE `categories` SET `name` = '$name' where id = $id";
         $u = mysqli_query($conn, $update);
         testMessage($u, "Updated category");
-        // header('LOCATION: http://localhost/pets/admin/travelAgenecy/list.php');
     }
 }
 ?>
