@@ -2,8 +2,13 @@
 include '../shared/head.php';
 include '../shared/header.php';
 include '../sharedFunc/db.php';
-$select = "SELECT posts.id id ,posts.title title ,posts.image image , posts.description description , users.name author FROM `posts` JOIN users ON posts.userId = users.id where `status` ='done'";
-$s = mysqli_query($conn, $select);
+
+if(isset($_GET['show'])){
+    $id = $_GET['show'];
+    $select = "SELECT posts.id id ,posts.title title,users.phone phone ,posts.image image , posts.description description , users.name author FROM `posts` JOIN users ON posts.userId = users.id where `status` ='done' and categoryId = $id ";
+    $s = mysqli_query($conn, $select);
+}
+
 if (isset($_SESSION['admin'])) {
 } else {
     header("location:/pets/user/pages-login.php");
@@ -34,6 +39,9 @@ if (isset($_SESSION['admin'])) {
                             <p>
                             </p>
                             Author: <p> <?php echo $data['author'] ?>
+                            </p>
+                            </p>
+                            P:Number: <p> <?php echo $data['phone'] ?>
                             </p>
                         </div>
                     </div>

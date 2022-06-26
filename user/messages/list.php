@@ -50,7 +50,6 @@ if (isset($_SESSION['admin'])) {
                   <th> <?php echo $data['data'] ?> </th>
                   <th> <?php echo $data['replay'] ?> </th>
                   <th> <?php echo $data['userId'] ?> </th>
-                  <th> <a class="btn btn-info" href="/pets/admin/messages/reply.php?show=<?php echo $data['id'] ?>">reply </a> </th>
                   <th> <a class="btn btn-danger" onclick="return confirm('are your Sure !')" href="/pets/admin/messages/list.php?delete=<?php echo $data['id'] ?>">delete </a> </th>
                 </tr>
               <?php } ?>

@@ -166,7 +166,8 @@ include './sharedFunc/db.php';
             <img src="assets/img/t4.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
-                <h4>Mariam Amir</h4>
+                    <h4>Mariam khaled</h4>
+             
                 <span>HR</span>
 
               </div>
@@ -178,7 +179,7 @@ include './sharedFunc/db.php';
             <img src="assets/img/t5.jpeg" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
-                <h4>Mariam khaled</h4>
+              <h4>Mariam Amir</h4>
                 <span>Financial</span>
               </div>
             </div>

@@ -21,7 +21,7 @@ if (isset($_GET['logout'])) {
         <?php if (isset($_SESSION['admin'])) : ?>
           <li><a class="nav-link scrollto" href="/pets/user/messages/list.php">messages</a></li>
           <li><a class="nav-link scrollto" href="/pets/user/posts/add.php">Create Post</a></li>
-          <li><a class="nav-link scrollto" href="/pets/user/posts/list.php">List posts</a></li>
+          <li><a class="nav-link scrollto" href="/pets/user/posts/category.php">List Categories</a></li>
         <?php endif; ?>
         <li><a class="nav-link scrollto" href="/pets/user/#footer">Contact</a></li>
       </ul>
