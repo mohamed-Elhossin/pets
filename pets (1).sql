@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2022 at 04:30 AM
+-- Generation Time: Jun 28, 2022 at 05:06 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -43,8 +43,7 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `name`, `phone`, `email`, `password`, `image`, `role`) VALUES
 (3, 'ahmed tofiq', '01117433885', 'm.m.m.elhossin@gmail.com', '123', 'Gull_portrait_ca_usa.jpg', 1),
-(4, 'mariam khaled', '0123211233', 'mariam09@gmail.com', '123', 't4.jpeg', 0),
-(5, 'Toma', '01117433885', 'm.m.m.elhossin@gmail.com', '123', 'admincase.png', 0);
+(4, 'mariam khaled', '0123211233', 'mariam09@gmail.com', '123', 't4.jpeg', 0);
 
 -- --------------------------------------------------------
 
@@ -101,7 +100,9 @@ CREATE TABLE `messages` (
 
 INSERT INTO `messages` (`id`, `subject`, `data`, `replay`, `userId`) VALUES
 (4, 'Problem', 'انا عندي مشكله', 'ممكن تقول مشكلتك', 4),
-(5, 'problem', 'اي حاجه', 'no Answer Yet', 8);
+(5, 'problem', 'اي حاجه', 'testetts', 8),
+(6, 'sdafds', 'fdsafdfsa', 'mariam marima', 4),
+(7, 'sdad', 'dasd', 'fsadfds', 4);
 
 -- --------------------------------------------------------
 
@@ -113,6 +114,7 @@ CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
   `title` varchar(44) NOT NULL,
   `image` varchar(222) DEFAULT NULL,
+  `image2` varchar(255) NOT NULL,
   `description` varchar(55) NOT NULL,
   `status` varchar(11) NOT NULL DEFAULT 'waiting',
   `userId` int(11) NOT NULL,
@@ -123,10 +125,11 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `image`, `description`, `status`, `userId`, `categoryId`) VALUES
-(13, 'hi i want buy cat', 'p5.jpeg', 'please iam search about cat', 'done', 4, 1),
-(14, 'test', 'Screenshot_1.png', 'testets', 'done', 8, 4),
-(15, 'ياجماعه انا دكتوووور', 'Screenshot_1.png', 'الي عاير يكشف', 'waiting', 4, 6);
+INSERT INTO `posts` (`id`, `title`, `image`, `image2`, `description`, `status`, `userId`, `categoryId`) VALUES
+(13, 'hi i want buy cat', 'p5.jpeg', '', 'please iam search about cat', 'done', 4, 1),
+(14, 'test', 'Screenshot_1.png', '', 'testets', 'done', 8, 4),
+(15, 'ياجماعه انا دكتوووور', 'Screenshot_1.png', '', 'الي عاير يكشف', 'done', 4, 6),
+(16, 'ads', 'Screenshot_13.png', 'erd.png', 'cdsad', 'done', 4, 6);
 
 -- --------------------------------------------------------
 
@@ -149,13 +152,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `password`, `image`) VALUES
-(1, 'aaa', 'aaaa', '2121', 'asdas', '123', 'sadfdsa'),
 (2, 'Mohamed El hosisnysss', 'm.m.m.elhossin@gmail.com', '01117433885', 'asdfdsfasfdsafdsafdsaf', '1234', '63346499.jfif'),
 (3, 'Mohamed El hosisny', 'admin@admin.com', '01117433885', 'asdfdsfasfdsafdsafdsaf', '123', 'Gull_portrait_ca_usa.jpg'),
-(4, 'Mohamed El hosisny', 'm.m.m.elhossin@gmail.com', '23424324324', 'nacer city', '123', 'download.png'),
+(4, 'Mohamed El hosisny', 'm.m.m.elhossin@gmail.com', '23424324324', 'alex', '123', 'download.png'),
 (5, 'ahmed tofiq', 'admin@admin.com', '01117433885', 'nacer city', '123', 'CER_Course_F.jpg'),
 (6, 'ahmed tofiq', 'admin@admin.com', '01117433885', 'nacer city', '123', 'CER_Course_F.jpg'),
-(7, 'mariam khaled', 'mariam@gmail.com', '0111213822', 'nacer city', '1234', 't4.jpeg'),
+(7, 'mariam khaled', 'mariam@gmail.com', '0111213822', 'cairo', '1234', 't4.jpeg'),
 (8, 'ahmed tofiq', 'ahmed@gmail.com', '01117433885', 'asfdsafd', '1234', 'ERD.png');
 
 --
@@ -229,19 +231,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

@@ -1609,3 +1609,13 @@ section {
 #footer .credits a:hover {
   color: #0a98c0;
 }
+
+.addBanar{
+width: 20%;
+height: 200px;
+
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  z-index: 2312312;
+}

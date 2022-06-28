@@ -19,10 +19,18 @@ if (isset($_POST['send'])) {
     } else {
         echo "image Uploaded false";
     }
-    $insert = "INSERT INTO `posts` VALUES (NULL , '$title','$image_name' ,'$description',DEFAULT, $userId,$catId )";
+    $image_name2 = $_FILES['image2']['name'];
+    $image_tmp2 = $_FILES['image2']['tmp_name'];
+    $location = "upload/" . $image_name2;
+    if (move_uploaded_file($image_tmp2, $location)) {
+        echo "image Uploaded Done";
+    } else {
+        echo "image Uploaded false";
+    }
+    $insert = "INSERT INTO `posts` VALUES (NULL , '$title','$image_name','$image_name2' ,'$description',DEFAULT, $userId,$catId )";
     $i = mysqli_query($conn, $insert);
     testMessage($i, "Post Craeted ");
-    
+
 }
 if (isset($_SESSION['admin'])) {
 } else {
@@ -58,7 +66,13 @@ if (isset($_GET['edit'])) {
     }
 }
 ?>
+
+
 <main id="main" class="main  my-5 pt-5">
+<div class="alert addBanar alert-warning alert-dismissible fade show" role="alert">
+  <strong>Hi!</strong> Your Can Place your ad here
+</div>
+
     <div class="pagetitle">
 
         <?php if ($update): ?>
@@ -80,13 +94,17 @@ if (isset($_GET['edit'])) {
                                 <input value="<?php echo $title ?>" name="title" type="text" required class="form-control">
                             </div>
                             <div class="form-group">
-                                <label> user description </label>
+                                <label> Post description </label>
                                 <input  value="<?php echo $description ?>" name="description" type="text" required class="form-control">
                             </div>
                             <?php if (!$update): ?>
                                 <div class="form-group">
-                                    <label> user image </label>
+                                    <label> Post image </label>
                                     <input name="image" type="file" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>health certificate image </label>
+                                    <input name="image2" type="file" required class="form-control">
                                 </div>
                             <?php endif;?>
                             <div class="form-group">

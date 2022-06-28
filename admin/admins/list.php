@@ -11,7 +11,7 @@ if (isset($_GET['delete'])) {
   $id =   $_GET['delete'];
   $delete = "DELETE FROM `admin` where id = $id";
   $d =  mysqli_query($conn, $delete);
-  header('LOCATION: /pets/admin/admins/list.php');
+  path("/admins/list.php");
 }
 if ($_SESSION['role'] == 0) {
 

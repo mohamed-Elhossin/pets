@@ -5,7 +5,7 @@ include '../shared/header.php';
 include '../sharedFunc/db.php';
 include '../sharedFunc/func.php';
 $userId = $_SESSION['adminId'];
-$select = "SELECT * FROM `messages` where id =$userId";
+$select = "SELECT * FROM `messages` where userId =$userId";
 $s = mysqli_query($conn, $select);
 if (isset($_GET['delete'])) {
   $id =   $_GET['delete'];
@@ -19,6 +19,10 @@ if (isset($_SESSION['admin'])) {
 }
 ?>
 <main id="main" class="main my-5 py-5">
+<div class="alert addBanar alert-warning alert-dismissible fade show" role="alert">
+  <strong>Hi!</strong> Your Can Place your ad here
+</div>
+
   <div class="pagetitle">
 
     <nav>
@@ -30,7 +34,7 @@ if (isset($_SESSION['admin'])) {
   </div><!-- End Page Title -->
   <section class="section dashboard">
     <div class="row">
-      <div class="container col-9 mt-5 text-center">
+      <div class="container col-7 mt-5 text-center">
         <div class="card">
           <a href="./reply.php" class="btn btn-info"> Send Message </a>
           <div class="card-body">

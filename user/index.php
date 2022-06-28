@@ -86,6 +86,48 @@ include './sharedFunc/db.php';
 
     </div>
   </section><!-- End Services Section -->
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="bg-danger services section-bg">
+    <div class="container">
+
+      <header class="section-header">
+        <h3>Our ADs</h3>
+      </header>
+
+      <div class="row g-5">
+
+        <div class="col-md-6 col-lg-4 wow bounceInUp">
+          <div class="box">
+            <div class="icon" style="background: #fceef3;"><i class="bi bi-briefcase" style="color: #ff689b;"></i>
+            </div>
+            <h4 class="title"><a>Place Your ADs Here</a></h4>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            <div class="icon" style="background: #fff0da;"><i class="bi bi-card-checklist" style="color: #e98e06;"></i></div>
+            <h4 class="title">
+              <a>Place Your ADs Here
+              </a>
+            </h4>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            <div class="icon" style="background: #e6fdfc;"><i class="bi bi-bar-chart" style="color: #3fcdc7;"></i>
+            </div>
+            <h4 class="title"><a>Place Your ADs Here
+              </a></h4>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
 
   <!-- ======= Why Us Section ======= -->
   <section id="why-us" class="why-us">

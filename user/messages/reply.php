@@ -20,6 +20,7 @@ $userId = $_SESSION['adminId'];
   }
 ?>
 <main id="main" class="main my-5 py-5">
+
   <div class="pagetitle">
     <h1>Send Message</h1>
     <nav>
@@ -42,7 +43,7 @@ $userId = $_SESSION['adminId'];
 
             <div class="form-group">
               <label>Message Data </label>
-              <input type="text" placeholder="Enter your Data" class="mt-3 form-control" name="data">
+              <input type="text" placeholder="Enter your Data" required class="mt-3 form-control" name="data">
             </div>
             <button name="send" class="btn btn-info my-3"> Send Your Answer </button>
           </form>

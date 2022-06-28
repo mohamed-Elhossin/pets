@@ -5,8 +5,7 @@ include '../shared/aside.php';
 include '../sharedFunc/db.php';
 include '../sharedFunc/func.php';
 
-$select = "SELECT * FROM `travel_agency`";
-$travels = mysqli_query($conn, $select);
+
 
 if (isset($_POST['send'])) {
     $name = $_POST['name'];
@@ -29,7 +28,6 @@ if (isset($_GET['edit'])) {
 
     if (isset($_POST['update'])) {
         $name = $_POST['name'];
-
         $update = "UPDATE `categories` SET `name` = '$name' where id = $id";
         $u = mysqli_query($conn, $update);
         testMessage($u, "Updated category");

@@ -3,9 +3,9 @@ include '../shared/head.php';
 include '../shared/header.php';
 include '../sharedFunc/db.php';
 
-if(isset($_GET['show'])){
+if (isset($_GET['show'])) {
     $id = $_GET['show'];
-    $select = "SELECT posts.id id ,posts.title title,users.phone phone ,posts.image image , posts.description description , users.name author FROM `posts` JOIN users ON posts.userId = users.id where `status` ='done' and categoryId = $id ";
+    $select = "SELECT users.address rr ,posts.id id ,posts.title title,users.phone phone ,posts.image image , posts.description description , users.name author FROM `posts` JOIN users ON posts.userId = users.id where `status` ='done' and categoryId = $id ";
     $s = mysqli_query($conn, $select);
 }
 
@@ -15,15 +15,25 @@ if (isset($_SESSION['admin'])) {
 }
 ?>
 <!-- ======= Pricing Section ======= -->
-<section id="pricing" class="my-5 pricing section-bg wow fadeInUp">
 
+<section id="pricing" class="my-5 pricing section-bg wow fadeInUp">
+<form action="../show.php">
+            <div class=" my-5">
+                <div class="col">
+                    <label for=""> Search by Location</label>
+                    <input type="text" name="location" class="form-control" placeholder="search by Barber Location">
+                </div>
+            </div>
+            <button name="search" class="btn btn-info"> Search By Location </button>
+</form>
     <div class="container">
         <header class="section-header">
             <h3>Posts</h3>
         </header>
+
         <div class="row flex-items-xs-middle flex-items-xs-center">
             <!-- Basic Plan  -->
-            <?php foreach ($s as $data) { ?>
+            <?php foreach ($s as $data) {?>
                 <div class="col-xs-12 col-lg-4 ">
                     <div class="card  bg-dark mt-5">
                         <img height="300" src="/pets/user/posts/upload/<?php echo $data['image'] ?>" class="img-top" alt="Eror">
@@ -43,11 +53,14 @@ if (isset($_SESSION['admin'])) {
                             </p>
                             P:Number: <p> <?php echo $data['phone'] ?>
                             </p>
+                            </p>
+                            User Locaiton: <p> <?php echo $data['rr'] ?>
+                            </p>
                         </div>
                     </div>
                 </div>
 
-            <?php } ?>
+            <?php }?>
         </div>
     </div>
 

@@ -11,7 +11,7 @@ if (isset($_GET['delete'])) {
   $id =   $_GET['delete'];
   $delete = "DELETE FROM `users` where id = $id";
   $d =  mysqli_query($conn, $delete);
-  header('LOCATION: /pets/admin/users/list.php');
+go("users/list.php");
 }
 ?>
 <main id="main" class="main">
